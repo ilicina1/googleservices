@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
+import 'package:googleservices/size_config.dart';
 
 class SecondScreen extends StatefulWidget {
+  String naslov;
+  String imgUrl = "";
+  String audioUrl = "";
+  SecondScreen(this.naslov) {
+    imgUrl = naslov + '.png';
+    audioUrl = naslov + '.mp3';
+  }
   @override
   _SecondScreenState createState() => _SecondScreenState();
 }
@@ -16,6 +24,7 @@ class _SecondScreenState extends State<SecondScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: Column(
         children: [
@@ -29,7 +38,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   },
                   child: Icon(
                     Icons.arrow_back,
-                    size: 35,
+                    size: SizeConfig.screenWidth * 0.1,
                   ),
                 ),
               ],
@@ -39,8 +48,8 @@ class _SecondScreenState extends State<SecondScreen> {
             padding: const EdgeInsets.only(top: 40.0),
             child: Container(
               // height: SizeConfig.screenHeight * 0.5,
-              width: 80,
-              child: Image.asset('assets/google.png'),
+              width: SizeConfig.screenWidth * 0.2,
+              child: Image.asset('assets/' + widget.imgUrl),
             ),
           ),
           Padding(
@@ -49,16 +58,16 @@ class _SecondScreenState extends State<SecondScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  'Naslov',
+                  widget.naslov,
                   style: TextStyle(
                     fontSize: 50,
                   ),
                 ),
                 TextButton(
-                  onPressed: () => _audioCache.play('google.mp3'),
+                  onPressed: () => _audioCache.play(widget.audioUrl),
                   child: Icon(
                     Icons.play_circle_filled_outlined,
-                    size: 50,
+                    size: SizeConfig.screenWidth * 0.17,
                   ),
                 ),
               ],
