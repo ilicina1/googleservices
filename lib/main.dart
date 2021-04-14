@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/screens/main_screen.dart';
+import 'package:googleservices/widgets/kartica.dart';
 
 void main() {
   runApp(MyApp());
