@@ -24,7 +24,9 @@ class _SecondScreenState extends State<SecondScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Icon(
                     Icons.arrow_back,
                     size: 35,
