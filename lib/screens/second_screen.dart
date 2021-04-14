@@ -34,6 +34,39 @@ class _SecondScreenState extends State<SecondScreen> {
               child: Image.asset('assets/google.png'),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'Naslov',
+                  style: TextStyle(
+                    fontSize: 50,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.play_circle_filled_outlined,
+                    size: 50,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(55, 50, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Neki tekst',
+                  style: TextStyle(color: Colors.grey[400]),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
