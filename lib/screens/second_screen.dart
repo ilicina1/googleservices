@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
-import 'package:googleservices/size_config.dart';
+import 'package:googleservices/services/size_config.dart';
 
 class SecondScreen extends StatefulWidget {
   String naslov = "";

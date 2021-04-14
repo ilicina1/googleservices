@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/size_config.dart';
+import 'package:googleservices/services/size_config.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:googleservices/widgets/kartica.dart';
@@ -16,8 +16,8 @@ class _MainScreenState extends State<MainScreen> {
       'flutter',
       'gmail',
       'firebase',
-      'Google drive',
-      'Googl maps',
+      'googledrive',
+      'googlemaps',
       'youtube',
       'kotlin',
       'google'
@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/google_text.png',
+                'assets/images/google_text.png',
                 width: SizeConfig.blockSizeHorizontal * 70,
                 height: SizeConfig.blockSizeVertical * 20,
               ),
@@ -57,8 +57,8 @@ class _MainScreenState extends State<MainScreen> {
                 crossAxisCount: 2,
                 mainAxisSpacing: 8,
                 itemBuilder: (BuildContext context, int index) {
-                  return new KarticaWidget('Google Services',
-                      '${nazivAplikacije[index]}', slike[index]);
+                  return new KarticaWidget(
+                      nazivAplikacije[index], slike[index]);
                 },
                 staggeredTileBuilder: (int index) =>
                     new StaggeredTile.count(1, index.isEven ? 1 : 1)),
