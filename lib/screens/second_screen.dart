@@ -3,7 +3,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:googleservices/size_config.dart';
 
 class SecondScreen extends StatefulWidget {
-  String naslov;
+  String naslov = "";
   String imgUrl = "";
   String audioUrl = "";
   SecondScreen(this.naslov) {
@@ -26,6 +26,7 @@ class _SecondScreenState extends State<SecondScreen> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           SafeArea(
@@ -49,7 +50,7 @@ class _SecondScreenState extends State<SecondScreen> {
             child: Container(
               // height: SizeConfig.screenHeight * 0.5,
               width: SizeConfig.screenWidth * 0.2,
-              child: Image.asset('assets/' + widget.imgUrl),
+              child: Image.asset('assets/images/' + widget.imgUrl),
             ),
           ),
           Padding(
@@ -64,7 +65,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () => _audioCache.play(widget.audioUrl),
+                  onPressed: () => _audioCache.play('audio/' + widget.audioUrl),
                   child: Icon(
                     Icons.play_circle_filled_outlined,
                     size: SizeConfig.screenWidth * 0.17,
@@ -73,16 +74,19 @@ class _SecondScreenState extends State<SecondScreen> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(55, 50, 0, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Neki tekst',
-                  style: TextStyle(color: Colors.grey[400]),
-                )
-              ],
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                alignment: Alignment.topCenter,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Text(''),
+              ),
             ),
           ),
         ],
