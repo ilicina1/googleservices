@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/screens/main_screen.dart';
+import 'package:googleservices/widgets/kartica.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: KarticaWidget(),
     );
   }
 }
