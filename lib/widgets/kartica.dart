@@ -4,7 +4,7 @@ import 'package:googleservices/size_config.dart';
 class KarticaWidget extends StatelessWidget {
   var nazivServisa = "nekiNaziv";
   var nazivAplikacije = "nekaAplikacija";
-  var linkSlike = "assets/images/test.jpg";
+  var linkSlike = "test.jpg";
 
   KarticaWidget(this.nazivAplikacije, this.nazivServisa, this.linkSlike);
   //ako se ne proslijedi nista neka ovo bude defaultni
