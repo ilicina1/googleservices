@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googleservices/size_config.dart';
 
 class KarticaWidget extends StatelessWidget {
   var nazivServisa = "nekiNaziv";
@@ -9,6 +10,8 @@ class KarticaWidget extends StatelessWidget {
   //ako se ne proslijedi nista neka ovo bude defaultni
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
@@ -16,14 +19,14 @@ class KarticaWidget extends StatelessWidget {
           GestureDetector(
             onTap: () {},
             child: Container(
-              width: 335,
+              width: SizeConfig.screenWidth * 0.5,
               height: 174,
               child: Card(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Column(
                   children: [
                     SizedBox(
-                      width: 335,
+                      width: 200,
                       height: 110,
                       child: Image.asset(
                         linkSlike,
