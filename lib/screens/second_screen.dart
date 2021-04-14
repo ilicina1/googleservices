@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 class SecondScreen extends StatefulWidget {
   @override
@@ -7,6 +7,13 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
+  final _audioCache = AudioCache();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +53,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => _audioCache.play('google.mp3'),
                   child: Icon(
                     Icons.play_circle_filled_outlined,
                     size: 50,
