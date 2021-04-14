@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class KarticaWidget extends StatelessWidget {
+  var nazivServisa = "nekiNaziv";
+  var nazivAplikacije = "nekaAplikacija";
+  var linkSlike = "assets/images/test.jpg";
+
+  KarticaWidget(this.nazivAplikacije, this.nazivServisa, this.linkSlike);
+  //ako se ne proslijedi nista neka ovo bude defaultni
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,14 +26,14 @@ class KarticaWidget extends StatelessWidget {
                       width: 335,
                       height: 110,
                       child: Image.asset(
-                        'assets/images/test.jpg',
+                        linkSlike,
                         fit: BoxFit.fill,
                       ),
                     ),
                     Expanded(
                         child: Column(children: [
-                      Text('Firebase'),
-                      Text('GoogleServices')
+                      Text(nazivServisa),
+                      Text(nazivAplikacije)
                     ]))
                   ],
                 ),

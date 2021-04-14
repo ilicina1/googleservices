@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: KarticaWidget(),
+      home: KarticaWidget(
+          "Firebase", "Google Services", "assets/images/test.jpg"),
     );
   }
 }
