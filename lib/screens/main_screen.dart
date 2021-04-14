@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/services/size_config.dart';
-import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:googleservices/widgets/kartica.dart';
 
