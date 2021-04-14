@@ -85,7 +85,12 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                child: Text(''),
+                child: Text(
+                  'Test Text: testtesttesttesttesttesttesttesttesttesttesttesttest',
+                  style: TextStyle(
+                    fontSize: 80,
+                  ),
+                ),
               ),
             ),
           ),
