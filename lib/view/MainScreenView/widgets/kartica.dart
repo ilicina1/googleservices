@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/screens/second_screen.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/utils/textVariables/textVariable.dart';
 import 'package:googleservices/utils/dummyData/dummyData.dart';
+import 'package:googleservices/view/SecondScreenView/pages/secondScreen.dart';
 
 class KarticaWidget extends StatelessWidget {
   int index;
