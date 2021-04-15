@@ -44,8 +44,10 @@ class KarticaWidget extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 10.0),
                         child: Column(children: [
-                          Text(nazivAplikacije[0].toUpperCase() +
-                              nazivAplikacije.substring(1)),
+                          Text(
+                            nazivAplikacije[0].toUpperCase() +
+                                nazivAplikacije.substring(1),
+                          ),
                           // Text(nazivAplikacije)
                         ]),
                       ),

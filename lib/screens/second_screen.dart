@@ -35,6 +35,9 @@ class _SecondScreenState extends State<SecondScreen> {
               children: [
                 TextButton(
                   onPressed: () {
+                    // ignore: deprecated_member_use
+                    // context.locale = Locale('bs', 'BA');
+                    // print('bosnianLang.Language'.tr());
                     Navigator.pop(context);
                   },
                   child: Icon(
