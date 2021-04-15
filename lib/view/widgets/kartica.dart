@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/screens/second_screen.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:googleservices/utils/shared/size_config.dart';
+import 'package:googleservices/utils/style/style.dart';
+import 'package:googleservices/utils/textVariables/textVariable.dart';
+import 'package:googleservices/utils/dummyData/dummyData.dart';
 
 class KarticaWidget extends StatelessWidget {
-  var nazivAplikacije = "nekaAplikacija";
-  var linkSlike = "test.jpg";
+  int index;
 
-  KarticaWidget(this.nazivAplikacije, this.linkSlike);
+  KarticaWidget(this.index);
   //ako se ne proslijedi nista neka ovo bude defaultni
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,11 @@ class KarticaWidget extends StatelessWidget {
         child: Column(children: [
           GestureDetector(
             onTap: () {
+              naslov = nazivAplikacije[index];
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SecondScreen(nazivAplikacije),
+                  builder: (context) => SecondScreen(),
                 ),
               );
             },
@@ -36,7 +39,7 @@ class KarticaWidget extends StatelessWidget {
                       width: 200,
                       height: 110,
                       child: Image.asset(
-                        'assets/images/' + linkSlike,
+                        'assets/images/' + slike[index],
                         fit: BoxFit.fitHeight,
                       ),
                     ),
@@ -45,18 +48,15 @@ class KarticaWidget extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 10.0),
                         child: Column(children: [
                           Text(
-                            nazivAplikacije[0].toUpperCase() +
-                                nazivAplikacije.substring(1),
+                            nazivAplikacije[index][0].toUpperCase() +
+                                nazivAplikacije[index].substring(1),
                           ),
-                          // Text(nazivAplikacije)
                         ]),
                       ),
                     )
                   ],
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
+                shape: Styles.rectangleBorder,
                 elevation: 5,
                 margin: EdgeInsets.all(10),
               ),
