@@ -32,7 +32,7 @@ Widget firstRow(BuildContext context) {
               context.locale = Locale('bs', 'BA');
             } else {
               // ignore: deprecated_member_use
-              context.locale = Locale('en', '');
+              context.locale = Locale('en', 'US');
             }
           },
         ),

@@ -5,7 +5,7 @@ import 'package:googleservices/view/YoutubeScreenView/youtubeScreen.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/view/MainScreenView/widgets/kartica.dart';
 
-Widget getMainBody(BuildContext context) {
+Widget getMainBody(context) {
   return Container(
     height: SizeConfig.blockSizeVertical * 100,
     child: Column(
