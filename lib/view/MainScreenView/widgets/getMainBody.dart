@@ -11,20 +11,6 @@ Widget getMainBody(context) {
     child: Column(
       children: [
         firstRow(context),
-        TextButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => YoutubeVideo(),
-              ),
-            );
-          },
-          child: Icon(
-            Icons.video_collection,
-            size: SizeConfig.screenWidth * 0.1,
-          ),
-        ),
         Container(
           height: SizeConfig.screenHeight * 0.65,
           width: SizeConfig.screenWidth,

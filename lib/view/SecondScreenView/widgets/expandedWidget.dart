@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/utils/style/style.dart';
+import 'package:googleservices/view/SecondScreenView/pages/secondScreen.dart';
+import 'package:googleservices/view/YoutubeScreenView/youtubeScreen.dart';
 
 Widget expandedWidget() {
   return Expanded(
