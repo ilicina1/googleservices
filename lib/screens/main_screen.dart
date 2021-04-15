@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
+import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/widgets/kartica.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -51,10 +51,7 @@ class _MainScreenState extends State<MainScreen> {
                   padding: const EdgeInsets.only(right: 8.0),
                   child: DropdownButton(
                     hint: Text('Language').tr(),
-                    icon: Icon(
-                      Icons.language,
-                      color: Colors.blue,
-                    ),
+                    icon: Styles.buttonLanguage,
                     items: ["English", "Bosanski"].map(
                       (String value) {
                         return new DropdownMenuItem<String>(

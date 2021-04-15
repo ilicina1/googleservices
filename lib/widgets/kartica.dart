@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/screens/second_screen.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
+import 'package:googleservices/utils/style/style.dart';
 
 class KarticaWidget extends StatelessWidget {
   var nazivAplikacije = "nekaAplikacija";
@@ -48,15 +49,12 @@ class KarticaWidget extends StatelessWidget {
                             nazivAplikacije[0].toUpperCase() +
                                 nazivAplikacije.substring(1),
                           ),
-                          // Text(nazivAplikacije)
                         ]),
                       ),
                     )
                   ],
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
+                shape: Styles.rectangleBorder,
                 elevation: 5,
                 margin: EdgeInsets.all(10),
               ),

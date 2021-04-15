@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
+import 'package:googleservices/utils/style/style.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -41,10 +42,7 @@ class GetReq extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Icon(
-                  Icons.arrow_back,
-                  size: SizeConfig.screenWidth * 0.1,
-                ),
+                child: Styles.buttonBack,
               ),
             ],
           ),
