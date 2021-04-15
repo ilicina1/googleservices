@@ -4,7 +4,7 @@ import 'package:googleservices/services/size_config.dart';
 
 class KarticaWidget extends StatelessWidget {
   var nazivAplikacije = "nekaAplikacija";
-  var linkSlike = "assets/images/test.jpg";
+  var linkSlike = "test.jpg";
 
   KarticaWidget(this.nazivAplikacije, this.linkSlike);
   //ako se ne proslijedi nista neka ovo bude defaultni
@@ -37,7 +37,7 @@ class KarticaWidget extends StatelessWidget {
                       height: 110,
                       child: Image.asset(
                         'assets/images/' + linkSlike,
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     Expanded(

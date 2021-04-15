@@ -3,6 +3,7 @@ import 'package:googleservices/services/size_config.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:googleservices/widgets/kartica.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MainScreen extends StatefulWidget {
   @override

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
+import 'package:googleservices/screens/getreq_screen.dart';
 import 'package:googleservices/services/size_config.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SecondScreen extends StatefulWidget {
   String naslov = "";
@@ -48,6 +51,14 @@ class _SecondScreenState extends State<SecondScreen> {
               ],
             ),
           ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade, child: GetReq()));
+              },
+              child: Text('GetRequest').tr()),
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
             child: Container(
@@ -88,7 +99,12 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                child: Text(''),
+                child: Text(
+                  'Test Text: testtesttesttesttesttesttesttesttesttesttesttesttest',
+                  style: TextStyle(
+                    fontSize: 80,
+                  ),
+                ),
               ),
             ),
           ),
