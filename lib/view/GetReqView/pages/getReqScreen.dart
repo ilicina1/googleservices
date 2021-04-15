@@ -29,9 +29,9 @@ class GetReq extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: Icon(
-                  Icons.mail,
+                  Icons.arrow_back,
                   color: Colors.white,
-                  size: SizeConfig.screenWidth * 0.9,
+                  size: SizeConfig.screenWidth * 0.4,
                 ),
               ),
             ],
