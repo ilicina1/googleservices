@@ -31,7 +31,7 @@ class GetReq extends StatelessWidget {
                 child: Icon(
                   Icons.arrow_back,
                   color: Colors.white,
-                  size: SizeConfig.screenWidth * 0.4,
+                  size: SizeConfig.screenWidth * 0.1,
                 ),
               ),
             ],
