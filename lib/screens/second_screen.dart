@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
+import 'package:googleservices/screens/getreq_screen.dart';
 import 'package:googleservices/services/size_config.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SecondScreen extends StatefulWidget {
   String naslov = "";
@@ -29,6 +31,17 @@ class _SecondScreenState extends State<SecondScreen> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
+          SizedBox(
+            height: SizeConfig.screenHeight * 0.2,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade, child: GetReq()));
+              },
+              child: Text("Get request na Klix")),
           SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
