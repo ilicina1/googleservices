@@ -5,12 +5,10 @@ import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/utils/style/style.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:googleservices/utils/textVariables/textVariable.dart';
 
 class SecondScreen extends StatefulWidget {
-  String naslov = "";
-  String imgUrl = "";
-  String audioUrl = "";
-  SecondScreen(this.naslov) {
+  SecondScreen() {
     imgUrl = naslov + '.png';
     audioUrl = naslov + '.mp3';
   }
@@ -63,7 +61,7 @@ class _SecondScreenState extends State<SecondScreen> {
             child: Container(
               // height: SizeConfig.screenHeight * 0.5,
               width: SizeConfig.screenWidth * 0.2,
-              child: Image.asset('assets/images/' + widget.imgUrl),
+              child: Image.asset('assets/images/' + imgUrl),
             ),
           ),
           Padding(
@@ -72,11 +70,11 @@ class _SecondScreenState extends State<SecondScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  widget.naslov,
+                  naslov,
                   style: Styles.naslovStyle,
                 ),
                 TextButton(
-                  onPressed: () => _audioCache.play('audio/' + widget.audioUrl),
+                  onPressed: () => _audioCache.play('audio/' + audioUrl),
                   child: Styles.buttonPlay,
                 ),
               ],

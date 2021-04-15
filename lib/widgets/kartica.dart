@@ -2,12 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:googleservices/screens/second_screen.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/utils/style/style.dart';
+import 'package:googleservices/utils/textVariables/textVariable.dart';
 
 class KarticaWidget extends StatelessWidget {
-  var nazivAplikacije = "nekaAplikacija";
-  var linkSlike = "test.jpg";
+  int index;
 
-  KarticaWidget(this.nazivAplikacije, this.linkSlike);
+  List<String> nazivAplikacije = [
+    'flutter',
+    'gmail',
+    'firebase',
+    'googledrive',
+    'googlemaps',
+    'youtube',
+    'kotlin',
+    'google'
+  ];
+  List<String> slike = [
+    'flutter.png',
+    'gmail.png',
+    'firebase.png',
+    'googledrive.png',
+    'googlemaps.png',
+    'youtube.png',
+    'kotlin.png',
+    'google.png'
+  ];
+
+  KarticaWidget(this.index);
   //ako se ne proslijedi nista neka ovo bude defaultni
   @override
   Widget build(BuildContext context) {
@@ -19,10 +40,11 @@ class KarticaWidget extends StatelessWidget {
         child: Column(children: [
           GestureDetector(
             onTap: () {
+              naslov = nazivAplikacije[index];
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SecondScreen(nazivAplikacije),
+                  builder: (context) => SecondScreen(),
                 ),
               );
             },
@@ -37,7 +59,7 @@ class KarticaWidget extends StatelessWidget {
                       width: 200,
                       height: 110,
                       child: Image.asset(
-                        'assets/images/' + linkSlike,
+                        'assets/images/' + slike[index],
                         fit: BoxFit.fitHeight,
                       ),
                     ),
@@ -46,8 +68,8 @@ class KarticaWidget extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 10.0),
                         child: Column(children: [
                           Text(
-                            nazivAplikacije[0].toUpperCase() +
-                                nazivAplikacije.substring(1),
+                            nazivAplikacije[index][0].toUpperCase() +
+                                nazivAplikacije[index].substring(1),
                           ),
                         ]),
                       ),
