@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_easyloading/flutter_easyloading.dart';

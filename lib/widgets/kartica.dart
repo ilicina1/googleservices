@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/screens/second_screen.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:googleservices/utils/shared/size_config.dart';
 
 class KarticaWidget extends StatelessWidget {
   var nazivAplikacije = "nekaAplikacija";
