@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:googleservices/screens/youtube_video.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/widgets/kartica.dart';
@@ -54,8 +55,22 @@ class _MainScreenState extends State<MainScreen> {
                 )
               ],
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => YoutubeVideo(),
+                  ),
+                );
+              },
+              child: Icon(
+                Icons.video_collection,
+                size: SizeConfig.screenWidth * 0.1,
+              ),
+            ),
             Container(
-              height: SizeConfig.screenHeight * 0.8,
+              height: SizeConfig.screenHeight * 0.65,
               width: SizeConfig.screenWidth,
               child: StaggeredGridView.countBuilder(
                   itemCount: 8,

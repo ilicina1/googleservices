@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/utils/textVariables/textVariable.dart';
 import 'package:http/http.dart' as http;
