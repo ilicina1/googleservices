@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/services/size_config.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:googleservices/utils/shared/size_config.dart';
+import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/widgets/kartica.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -13,26 +13,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    List<String> nazivAplikacije = [
-      'flutter',
-      'gmail',
-      'firebase',
-      'googledrive',
-      'googlemaps',
-      'youtube',
-      'kotlin',
-      'google'
-    ];
-    List<String> slike = [
-      'flutter.png',
-      'gmail.png',
-      'firebase.png',
-      'googledrive.png',
-      'googlemaps.png',
-      'youtube.png',
-      'kotlin.png',
-      'google.png'
-    ];
     SizeConfig().init(context);
     return Scaffold(
       body: Container(
@@ -51,10 +31,7 @@ class _MainScreenState extends State<MainScreen> {
                   padding: const EdgeInsets.only(right: 8.0),
                   child: DropdownButton(
                     hint: Text('Language').tr(),
-                    icon: Icon(
-                      Icons.language,
-                      color: Colors.blue,
-                    ),
+                    icon: Styles.buttonLanguage,
                     items: ["English", "Bosanski"].map(
                       (String value) {
                         return new DropdownMenuItem<String>(
@@ -81,13 +58,12 @@ class _MainScreenState extends State<MainScreen> {
               height: SizeConfig.screenHeight * 0.8,
               width: SizeConfig.screenWidth,
               child: StaggeredGridView.countBuilder(
-                  itemCount: nazivAplikacije.length,
+                  itemCount: 8,
                   shrinkWrap: false,
                   crossAxisCount: 2,
                   mainAxisSpacing: 8,
                   itemBuilder: (BuildContext context, int index) {
-                    return new KarticaWidget(
-                        nazivAplikacije[index], slike[index]);
+                    return new KarticaWidget(index);
                   },
                   staggeredTileBuilder: (int index) =>
                       new StaggeredTile.count(1, index.isEven ? 1 : 1)),
