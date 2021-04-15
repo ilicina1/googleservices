@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/screens/second_screen.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:googleservices/view/SecondScreenView/pages/second_screen.dart';
+import 'package:googleservices/shared/size_config.dart';
+import 'package:googleservices/viewModel/karticaViewModel.dart';
 
 class KarticaWidget extends StatelessWidget {
   var nazivAplikacije = "nekaAplikacija";
@@ -18,12 +19,7 @@ class KarticaWidget extends StatelessWidget {
         child: Column(children: [
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SecondScreen(nazivAplikacije),
-                ),
-              );
+              karticaButtonPush(context);
             },
             child: Container(
               width: SizeConfig.screenWidth * 0.5,

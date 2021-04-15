@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:googleservices/shared/size_config.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:googleservices/view/widgets/kartica.dart';
+import 'package:googleservices/view/MainScreenView/widgets/kartica.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

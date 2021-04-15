@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
-import 'package:googleservices/screens/getreq_screen.dart';
-import 'package:googleservices/services/size_config.dart';
+import 'package:googleservices/view/GetReqView/pages/getreq_screen.dart';
+import 'package:googleservices/shared/size_config.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:easy_localization/easy_localization.dart';
 

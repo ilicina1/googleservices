@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/screens/getreq_screen.dart';
-import 'package:googleservices/screens/main_screen.dart';
+import 'package:googleservices/view/GetReqView/pages/getreq_screen.dart';
+import 'package:googleservices/view/MainScreenView/pages/main_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
