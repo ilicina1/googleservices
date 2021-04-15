@@ -51,10 +51,8 @@ class GetReq extends StatelessWidget {
                     barrierLabel: "Barrier",
                     barrierDismissible: true,
                     barrierColor: Colors.black.withOpacity(0.5),
-                    transitionDuration: Duration(
-                        milliseconds:
-                            1000), //da se brzo ne pokrene prema gore i samo djeluje kao da se
-                    //spawnalo
+                    //da se brzo ne pokrene prema gore i samo djeluje kao da se spawnalo
+                    transitionDuration: Duration(milliseconds: 1000),
                     context: context,
                     pageBuilder: (_, __, ___) {
                       return Align(

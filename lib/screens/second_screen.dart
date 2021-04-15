@@ -87,7 +87,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 alignment: Alignment.topCenter,
                 decoration: Styles.boxDecoration,
                 child: Text(
-                  'Test Text: testtesttesttesttesttesttesttesttesttesttesttesttest',
+                  'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttes',
                   style: Styles.bigTextStyle,
                 ),
               ),

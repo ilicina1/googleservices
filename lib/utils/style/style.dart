@@ -7,7 +7,7 @@ class Styles {
   );
 
   static final TextStyle bigTextStyle = TextStyle(
-    fontSize: 80,
+    fontSize: 50,
   );
 
   static final Icon buttonBack = Icon(
