@@ -31,17 +31,6 @@ class _SecondScreenState extends State<SecondScreen> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(
-            height: SizeConfig.screenHeight * 0.2,
-          ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        type: PageTransitionType.fade, child: GetReq()));
-              },
-              child: Text("Get request na Klix")),
           SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -58,6 +47,14 @@ class _SecondScreenState extends State<SecondScreen> {
               ],
             ),
           ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade, child: GetReq()));
+              },
+              child: Text("Get request na Klix")),
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
             child: Container(
