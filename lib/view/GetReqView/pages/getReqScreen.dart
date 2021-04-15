@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/shared/size_config.dart';
+import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/viewModel/requestViewModel.dart';
 import 'package:easy_localization/easy_localization.dart';
 
