@@ -55,18 +55,19 @@ class _MainScreenState extends State<MainScreen> {
               ],
             ),
             Container(
-              height: SizeConfig.screenHeight * 0.8,
+              height: SizeConfig.screenHeight * 0.65,
               width: SizeConfig.screenWidth,
               child: StaggeredGridView.countBuilder(
-                  itemCount: 8,
-                  shrinkWrap: false,
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 8,
-                  itemBuilder: (BuildContext context, int index) {
-                    return new KarticaWidget(index);
-                  },
-                  staggeredTileBuilder: (int index) =>
-                      new StaggeredTile.count(1, index.isEven ? 1 : 1)),
+                itemCount: 8,
+                shrinkWrap: false,
+                crossAxisCount: 2,
+                mainAxisSpacing: 8,
+                itemBuilder: (BuildContext context, int index) {
+                  return new KarticaWidget(index);
+                },
+                staggeredTileBuilder: (int index) =>
+                    new StaggeredTile.count(1, index.isEven ? 1 : 1),
+              ),
             ),
           ],
         ),
