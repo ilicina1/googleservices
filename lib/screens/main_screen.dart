@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/services/size_config.dart';
-import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:googleservices/widgets/kartica.dart';
 
@@ -39,13 +38,29 @@ class _MainScreenState extends State<MainScreen> {
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Image.asset(
                 'assets/images/google_text.png',
                 width: SizeConfig.blockSizeHorizontal * 70,
                 height: SizeConfig.blockSizeVertical * 20,
               ),
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: DropdownButton(
+                  hint: Text("Language"),
+                  icon: Icon(Icons.language),
+                  items: ["English", "Bosanski"].map(
+                    (String value) {
+                      return new DropdownMenuItem<String>(
+                        value: value,
+                        child: new Text('$value'),
+                      );
+                    },
+                  ).toList(),
+                  onChanged: (value) {},
+                ),
+              )
             ],
           ),
           Container(
