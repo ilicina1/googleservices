@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/size_config.dart';
-import 'package:flutter/src/rendering/box.dart';
+import 'package:googleservices/services/size_config.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:googleservices/widgets/kartica.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -11,6 +11,26 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
+    List<String> nazivAplikacije = [
+      'flutter',
+      'gmail',
+      'firebase',
+      'googledrive',
+      'googlemaps',
+      'youtube',
+      'kotlin',
+      'google'
+    ];
+    List<String> slike = [
+      'flutter.png',
+      'gmail.png',
+      'firebase.png',
+      'googledrive.png',
+      'googlemaps.png',
+      'youtube.png',
+      'kotlin.png',
+      'google.png'
+    ];
     SizeConfig().init(context);
     return Scaffold(
         body: Container(
@@ -21,28 +41,26 @@ class _MainScreenState extends State<MainScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/google_text.png',
+                'assets/images/google_text.png',
                 width: SizeConfig.blockSizeHorizontal * 70,
                 height: SizeConfig.blockSizeVertical * 20,
               ),
             ],
           ),
           Container(
-            height: 100,
+            height: SizeConfig.screenHeight * 0.8,
+            width: SizeConfig.screenWidth,
             child: StaggeredGridView.countBuilder(
+                itemCount: nazivAplikacije.length,
                 shrinkWrap: false,
                 crossAxisCount: 2,
-                itemBuilder: (BuildContext context, int index) => new Container(
-                    height: 40,
-                    color: Colors.green,
-                    child: new Center(
-                      child: new CircleAvatar(
-                        backgroundColor: Colors.white,
-                        child: new Text('$index'),
-                      ),
-                    )),
+                mainAxisSpacing: 8,
+                itemBuilder: (BuildContext context, int index) {
+                  return new KarticaWidget(
+                      nazivAplikacije[index], slike[index]);
+                },
                 staggeredTileBuilder: (int index) =>
-                    new StaggeredTile.count(2, index.isEven ? 2 : 1)),
+                    new StaggeredTile.count(1, index.isEven ? 1 : 1)),
           ),
         ],
       ),
