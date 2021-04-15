@@ -8,8 +8,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 
 Future<String> fetchAlbum() async {
-  final response = await http.get(Uri.https('klix.ba',
-      '/vijesti/bih/na-danasnji-dan-osnovana-je-armija-republike-bih-temelj-oruzanih-snaga-nase-zemlje/210415024'));
+  final response = await http.get(
+    Uri.https('klix.ba',
+        '/vijesti/bih/na-danasnji-dan-osnovana-je-armija-republike-bih-temelj-oruzanih-snaga-nase-zemlje/210415024'),
+  );
 
   if (response.statusCode == 200) {
     return jsonDecode(response.body.toString());
