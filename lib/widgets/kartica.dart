@@ -3,30 +3,10 @@ import 'package:googleservices/screens/second_screen.dart';
 import 'package:googleservices/utils/shared/size_config.dart';
 import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/utils/textVariables/textVariable.dart';
+import 'package:googleservices/utils/dummyData/dummyData.dart';
 
 class KarticaWidget extends StatelessWidget {
   int index;
-
-  List<String> nazivAplikacije = [
-    'flutter',
-    'gmail',
-    'firebase',
-    'googledrive',
-    'googlemaps',
-    'youtube',
-    'kotlin',
-    'google'
-  ];
-  List<String> slike = [
-    'flutter.png',
-    'gmail.png',
-    'firebase.png',
-    'googledrive.png',
-    'googlemaps.png',
-    'youtube.png',
-    'kotlin.png',
-    'google.png'
-  ];
 
   KarticaWidget(this.index);
   //ako se ne proslijedi nista neka ovo bude defaultni
