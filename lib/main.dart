@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:googleservices/view/GetReqView/pages/getreq_screen.dart';
-import 'package:googleservices/view/MainScreenView/pages/main_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:googleservices/view/MainScreenView/pages/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

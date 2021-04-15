@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
+import 'package:googleservices/utils/shared/size_config.dart';
+import 'package:googleservices/utils/style/style.dart';
 import 'package:googleservices/view/GetReqView/pages/getreq_screen.dart';
-import 'package:googleservices/shared/size_config.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:googleservices/utils/textVariables/textVariable.dart';
 
 class SecondScreen extends StatefulWidget {
-  String naslov = "";
-  String imgUrl = "";
-  String audioUrl = "";
-  SecondScreen(this.naslov) {
+  SecondScreen() {
     imgUrl = naslov + '.png';
     audioUrl = naslov + '.mp3';
   }
@@ -38,33 +37,31 @@ class _SecondScreenState extends State<SecondScreen> {
               children: [
                 TextButton(
                   onPressed: () {
-                    // ignore: deprecated_member_use
-                    // context.locale = Locale('bs', 'BA');
-                    // print('bosnianLang.Language'.tr());
                     Navigator.pop(context);
                   },
-                  child: Icon(
-                    Icons.arrow_back,
-                    size: SizeConfig.screenWidth * 0.1,
-                  ),
+                  child: Styles.buttonBack,
                 ),
               ],
             ),
           ),
           ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        type: PageTransitionType.fade, child: GetReq()));
-              },
-              child: Text('GetRequest').tr()),
+            onPressed: () {
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.fade,
+                  child: GetReq(),
+                ),
+              );
+            },
+            child: Text('GetRequest').tr(),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
             child: Container(
               // height: SizeConfig.screenHeight * 0.5,
               width: SizeConfig.screenWidth * 0.2,
-              child: Image.asset('assets/images/' + widget.imgUrl),
+              child: Image.asset('assets/images/' + imgUrl),
             ),
           ),
           Padding(
@@ -73,17 +70,12 @@ class _SecondScreenState extends State<SecondScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  widget.naslov,
-                  style: TextStyle(
-                    fontSize: 50,
-                  ),
+                  naslov,
+                  style: Styles.naslovStyle,
                 ),
                 TextButton(
-                  onPressed: () => _audioCache.play('audio/' + widget.audioUrl),
-                  child: Icon(
-                    Icons.play_circle_filled_outlined,
-                    size: SizeConfig.screenWidth * 0.17,
-                  ),
+                  onPressed: () => _audioCache.play('audio/' + audioUrl),
+                  child: Styles.buttonPlay,
                 ),
               ],
             ),
@@ -93,17 +85,10 @@ class _SecondScreenState extends State<SecondScreen> {
               scrollDirection: Axis.vertical,
               child: Container(
                 alignment: Alignment.topCenter,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                  ),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
+                decoration: Styles.boxDecoration,
                 child: Text(
                   'Test Text: testtesttesttesttesttesttesttesttesttesttesttesttest',
-                  style: TextStyle(
-                    fontSize: 80,
-                  ),
+                  style: Styles.bigTextStyle,
                 ),
               ),
             ),
