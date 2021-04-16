@@ -12,7 +12,7 @@ Widget getMainBody(context) {
       children: [
         firstRow(context),
         Container(
-          height: SizeConfig.screenHeight * 0.65,
+          height: SizeConfig.screenHeight * 0.8,
           width: SizeConfig.screenWidth,
           child: StaggeredGridView.countBuilder(
               itemCount: 8,
